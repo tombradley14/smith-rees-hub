@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built for Smith Rees | Bradley Copy Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+
+        html {
+            scroll-behavior: smooth !important;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            background-color: #050505 !important;
+            color: #e0e0e0 !important;
+            line-height: 1.6 !important;
+            overflow-x: hidden !important;
+            -webkit-font-smoothing: antialiased !important;
+        }
+
+        /* ===== UTILITY ===== */
+        .container {
+            max-width: 1100px !important;
+            margin: 0 auto !important;
+            padding: 0 24px !important;
+        }
+
+        .reveal {
+            opacity: 0 !important;
+            transform: translateY(40px) !important;
+            transition: opacity 0.7s ease, transform 0.7s ease !important;
+        }
+
+        .reveal.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .top-bar {
+            padding: 24px 0 !important;
+            text-align: center !important;
+        }
+
+        .top-bar span {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            letter-spacing: 2px !important;
+            text-transform: uppercase !important;
+            color: #9a9a9a !important;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 80px 0 60px !important;
+            text-align: center !important;
+        }
+
+        .hero-eyebrow {
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            letter-spacing: 4px !important;
+            text-transform: uppercase !important;
+            color: #37ca37 !important;
+            margin-bottom: 20px !important;
+            display: block !important;
+        }
+
+        .hero-name {
+            font-family: 'Playfair Display', Georgia, serif !important;
+            font-style: italic !important;
+            font-weight: 700 !important;
+            font-size: 88px !important;
+            line-height: 1.05 !important;
+            color: #37ca37 !important;
+            margin-bottom: 24px !important;
+        }
+
+        .hero-subtitle {
+            font-size: 22px !important;
+            font-weight: 600 !important;
+            color: #ffffff !important;
+            margin-bottom: 16px !important;
+        }
+
+        .hero-desc {
+            font-size: 16px !important;
+            color: #9a9a9a !important;
+            max-width: 640px !important;
+            margin: 0 auto !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            padding: 48px 0 !important;
+            border-top: 1px solid rgba(55, 202, 55, 0.15) !important;
+            border-bottom: 1px solid rgba(55, 202, 55, 0.15) !important;
+        }
+
+        .stats-grid {
+            display: flex !important;
+            justify-content: center !important;
+            gap: 60px !important;
+            flex-wrap: wrap !important;
+        }
+
+        .stat-item {
+            text-align: center !important;
+        }
+
+        .stat-number {
+            font-size: 48px !important;
+            font-weight: 700 !important;
+            color: #37ca37 !important;
+            line-height: 1.1 !important;
+            display: block !important;
+        }
+
+        .stat-label {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            color: #ffffff !important;
+            margin-top: 8px !important;
+            display: block !important;
+        }
+
+        /* ===== VIDEO PLACEHOLDER ===== */
+        .video-section {
+            padding: 80px 0 !important;
+        }
+
+        .video-section h2 {
+            font-size: 32px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            text-align: center !important;
+            margin-bottom: 24px !important;
+        }
+
+        .video-card {
+            background: rgba(26, 29, 33, 0.8) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(55, 202, 55, 0.12) !important;
+            border-radius: 20px !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            max-width: 800px !important;
+            margin: 0 auto !important;
+        }
+
+        .video-placeholder {
+            width: 100% !important;
+            aspect-ratio: 16 / 9 !important;
+            background: #0d0f11 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+        }
+
+        .play-icon {
+            width: 72px !important;
+            height: 72px !important;
+            border-radius: 50% !important;
+            background: rgba(55, 202, 55, 0.15) !important;
+            border: 2px solid #37ca37 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-bottom: 16px !important;
+            transition: background 0.3s ease, transform 0.3s ease !important;
+        }
+
+        .play-icon:hover {
+            background: rgba(55, 202, 55, 0.25) !important;
+            transform: scale(1.05) !important;
+        }
+
+        .play-icon svg {
+            width: 28px !important;
+            height: 28px !important;
+            fill: #37ca37 !important;
+            margin-left: 4px !important;
+        }
+
+        .video-placeholder p {
+            font-size: 14px !important;
+            color: #9a9a9a !important;
+        }
+
+        .video-caption {
+            padding: 20px 28px !important;
+            text-align: center !important;
+        }
+
+        .video-caption p {
+            font-size: 15px !important;
+            color: #9a9a9a !important;
+            line-height: 1.6 !important;
+        }
+
+        /* ===== PROCESS SECTION ===== */
+        .process-section {
+            padding: 80px 0 !important;
+        }
+
+        .section-heading {
+            font-size: 32px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            text-align: center !important;
+            margin-bottom: 48px !important;
+        }
+
+        .process-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4, 1fr) !important;
+            gap: 24px !important;
+        }
+
+        .process-step {
+            background: rgba(26, 29, 33, 0.8) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(55, 202, 55, 0.1) !important;
+            border-radius: 20px !important;
+            padding: 32px 24px !important;
+            text-align: center !important;
+            transition: border-color 0.3s ease, transform 0.3s ease !important;
+        }
+
+        .process-step:hover {
+            border-color: rgba(55, 202, 55, 0.3) !important;
+            transform: translateY(-4px) !important;
+        }
+
+        .step-number {
+            font-size: 36px !important;
+            font-weight: 700 !important;
+            color: #37ca37 !important;
+            margin-bottom: 12px !important;
+            display: block !important;
+        }
+
+        .step-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            margin-bottom: 8px !important;
+        }
+
+        .step-desc {
+            font-size: 14px !important;
+            color: #9a9a9a !important;
+            line-height: 1.6 !important;
+        }
+
+        /* ===== DELIVERABLES SECTION ===== */
+        .deliverables-section {
+            padding: 80px 0 !important;
+        }
+
+        .phase-label {
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 3px !important;
+            text-transform: uppercase !important;
+            color: #37ca37 !important;
+            margin-bottom: 24px !important;
+            display: block !important;
+        }
+
+        .deliverable-card {
+            background: rgba(26, 29, 33, 0.8) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(55, 202, 55, 0.1) !important;
+            border-radius: 20px !important;
+            margin-bottom: 20px !important;
+            overflow: hidden !important;
+            transition: border-color 0.3s ease !important;
+        }
+
+        .deliverable-card:hover {
+            border-color: rgba(55, 202, 55, 0.3) !important;
+        }
+
+        .deliverable-header {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding: 24px 28px !important;
+            cursor: pointer !important;
+            user-select: none !important;
+        }
+
+        .deliverable-header-left {
+            flex: 1 !important;
+        }
+
+        .deliverable-title {
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            margin-bottom: 4px !important;
+        }
+
+        .deliverable-desc {
+            font-size: 14px !important;
+            color: #9a9a9a !important;
+            line-height: 1.6 !important;
+        }
+
+        .toggle-icon {
+            width: 36px !important;
+            height: 36px !important;
+            min-width: 36px !important;
+            border-radius: 50% !important;
+            background: rgba(55, 202, 55, 0.1) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-left: 20px !important;
+            transition: transform 0.3s ease, background 0.3s ease !important;
+        }
+
+        .toggle-icon.open {
+            transform: rotate(45deg) !important;
+            background: rgba(55, 202, 55, 0.2) !important;
+        }
+
+        .toggle-icon svg {
+            width: 16px !important;
+            height: 16px !important;
+            stroke: #37ca37 !important;
+            stroke-width: 2.5 !important;
+            fill: none !important;
+        }
+
+        .deliverable-body {
+            max-height: 0 !important;
+            overflow: hidden !important;
+            transition: max-height 0.4s ease !important;
+        }
+
+        .deliverable-body.open {
+            max-height: 800px !important;
+        }
+
+        .deliverable-content {
+            padding: 0 28px 28px !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+
+        .deliverable-content ul {
+            list-style: none !important;
+            padding: 16px 0 0 0 !important;
+        }
+
+        .deliverable-content li {
+            font-size: 14px !important;
+            color: #e0e0e0 !important;
+            padding: 6px 0 !important;
+            padding-left: 20px !important;
+            position: relative !important;
+            line-height: 1.6 !important;
+        }
+
+        .deliverable-content li::before {
+            content: '' !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 14px !important;
+            width: 6px !important;
+            height: 6px !important;
+            border-radius: 50% !important;
+            background: #37ca37 !important;
+        }
+
+        .deliverable-content .preview-label {
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.5px !important;
+            text-transform: uppercase !important;
+            color: #37ca37 !important;
+            margin-top: 16px !important;
+            margin-bottom: 4px !important;
+            display: block !important;
+        }
+
+        .doc-link {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            margin-top: 16px !important;
+            padding: 10px 20px !important;
+            background: rgba(55, 202, 55, 0.1) !important;
+            border: 1px solid rgba(55, 202, 55, 0.25) !important;
+            border-radius: 12px !important;
+            color: #37ca37 !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
+            transition: background 0.3s ease !important;
+        }
+
+        .doc-link:hover {
+            background: rgba(55, 202, 55, 0.2) !important;
+        }
+
+        /* Live page cards */
+        .live-badge {
+            display: inline-block !important;
+            background: rgba(55, 202, 55, 0.15) !important;
+            color: #37ca37 !important;
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.5px !important;
+            text-transform: uppercase !important;
+            padding: 4px 10px !important;
+            border-radius: 6px !important;
+            margin-left: 12px !important;
+            vertical-align: middle !important;
+        }
+
+        .iframe-wrapper {
+            margin-top: 16px !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+            border: 1px solid rgba(55, 202, 55, 0.1) !important;
+            position: relative !important;
+            width: 100% !important;
+            height: 360px !important;
+            background: #0d0f11 !important;
+        }
+
+        .iframe-wrapper iframe {
+            width: 1200px !important;
+            height: 900px !important;
+            border: none !important;
+            transform: scale(0.45) !important;
+            transform-origin: top left !important;
+            pointer-events: none !important;
+        }
+
+        .view-page-btn {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            margin-top: 16px !important;
+            padding: 12px 24px !important;
+            background: #37ca37 !important;
+            border: none !important;
+            border-radius: 12px !important;
+            color: #050505 !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            transition: opacity 0.3s ease, transform 0.3s ease !important;
+        }
+
+        .view-page-btn:hover {
+            opacity: 0.9 !important;
+            transform: translateY(-2px) !important;
+        }
+
+        /* ===== CASE STUDY ===== */
+        .case-study-section {
+            padding: 80px 0 !important;
+        }
+
+        .case-card {
+            background: rgba(26, 29, 33, 0.8) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(55, 202, 55, 0.12) !important;
+            border-radius: 20px !important;
+            padding: 40px !important;
+            max-width: 800px !important;
+            margin: 0 auto !important;
+        }
+
+        .case-top {
+            display: flex !important;
+            align-items: center !important;
+            gap: 20px !important;
+            margin-bottom: 24px !important;
+        }
+
+        .case-avatar {
+            width: 64px !important;
+            height: 64px !important;
+            min-width: 64px !important;
+            border-radius: 50% !important;
+            background: linear-gradient(135deg, #37ca37, #2a9d2a) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 22px !important;
+            font-weight: 700 !important;
+            color: #050505 !important;
+        }
+
+        .case-name {
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+        }
+
+        .case-handle {
+            font-size: 14px !important;
+            color: #37ca37 !important;
+            text-decoration: none !important;
+            transition: opacity 0.3s ease !important;
+        }
+
+        .case-handle:hover {
+            opacity: 0.8 !important;
+        }
+
+        .case-quote {
+            font-size: 16px !important;
+            color: #e0e0e0 !important;
+            line-height: 1.75 !important;
+            margin-bottom: 28px !important;
+            padding-left: 20px !important;
+            border-left: 3px solid #37ca37 !important;
+        }
+
+        .case-stats {
+            display: flex !important;
+            gap: 40px !important;
+            flex-wrap: wrap !important;
+        }
+
+        .case-stat-item {
+            text-align: left !important;
+        }
+
+        .case-stat-value {
+            font-size: 24px !important;
+            font-weight: 700 !important;
+            color: #37ca37 !important;
+            display: block !important;
+        }
+
+        .case-stat-label {
+            font-size: 12px !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            color: #9a9a9a !important;
+            margin-top: 2px !important;
+            display: block !important;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 100px 0 80px !important;
+            text-align: center !important;
+        }
+
+        .cta-section h2 {
+            font-size: 36px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            margin-bottom: 16px !important;
+        }
+
+        .cta-section p {
+            font-size: 16px !important;
+            color: #9a9a9a !important;
+            max-width: 520px !important;
+            margin: 0 auto 36px !important;
+            line-height: 1.7 !important;
+        }
+
+        .cta-btn {
+            display: inline-block !important;
+            padding: 18px 48px !important;
+            background: #37ca37 !important;
+            color: #050505 !important;
+            font-size: 17px !important;
+            font-weight: 700 !important;
+            border-radius: 12px !important;
+            text-decoration: none !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            box-shadow: 0 0 30px rgba(55, 202, 55, 0.25) !important;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 0 50px rgba(55, 202, 55, 0.4) !important;
+        }
+
+        .cta-note {
+            font-size: 13px !important;
+            color: #9a9a9a !important;
+            margin-top: 20px !important;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            padding: 40px 0 !important;
+            text-align: center !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+
+        .site-footer a {
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            color: #9a9a9a !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .site-footer a:hover {
+            color: #37ca37 !important;
+        }
+
+        .site-footer .copy {
+            font-size: 12px !important;
+            color: #555555 !important;
+            margin-top: 8px !important;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero-name {
+                font-size: 56px !important;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .stats-grid {
+                gap: 40px !important;
+            }
+
+            .case-stats {
+                gap: 24px !important;
+            }
+
+            .iframe-wrapper {
+                height: 260px !important;
+            }
+
+            .iframe-wrapper iframe {
+                transform: scale(0.33) !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-name {
+                font-size: 42px !important;
+            }
+
+            .hero-subtitle {
+                font-size: 18px !important;
+            }
+
+            .hero {
+                padding: 60px 0 40px !important;
+            }
+
+            .section-heading {
+                font-size: 26px !important;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .stats-grid {
+                gap: 32px !important;
+            }
+
+            .stat-number {
+                font-size: 36px !important;
+            }
+
+            .case-card {
+                padding: 28px 20px !important;
+            }
+
+            .case-stats {
+                gap: 20px !important;
+            }
+
+            .cta-section h2 {
+                font-size: 28px !important;
+            }
+
+            .deliverable-header {
+                padding: 20px !important;
+            }
+
+            .deliverable-content {
+                padding: 0 20px 20px !important;
+            }
+
+            .iframe-wrapper {
+                height: 200px !important;
+            }
+
+            .iframe-wrapper iframe {
+                transform: scale(0.28) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>Bradley Copy</span>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-eyebrow reveal">Built Exclusively For</span>
+            <h1 class="hero-name reveal">Smith Rees</h1>
+            <p class="hero-subtitle reveal">Your Complete Webinar Funnel Package</p>
+            <p class="hero-desc reveal">A done-for-you webinar funnel system designed to scale Organic Overdrive beyond DM sales. Every deliverable below was built specifically for your business, your audience, and your brand.</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid reveal">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8" data-suffix="+">0</span>
+                    <span class="stat-label">Hours of Research</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="6" data-suffix="">0</span>
+                    <span class="stat-label">Custom Deliverables</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="2" data-suffix="">0</span>
+                    <span class="stat-label">Live Pages Built</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loom Video Placeholder -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="reveal">Watch the Walkthrough</h2>
+            <div class="video-card reveal">
+                <!-- REPLACE THIS ENTIRE .video-placeholder div WITH YOUR LOOM EMBED CODE -->
+                <div class="video-placeholder" id="loom-placeholder">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+                    </div>
+                    <p>Video coming soon</p>
+                </div>
+                <div class="video-caption">
+                    <p>A 3-minute video walking through everything below and why it matters for Organic Overdrive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-heading reveal">How This Was Built</h2>
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <span class="step-number">1</span>
+                    <h3 class="step-title">Deep Research</h3>
+                    <p class="step-desc">Analyzed your site, content, offers, audience, and competitive landscape.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="step-number">2</span>
+                    <h3 class="step-title">Gap Analysis</h3>
+                    <p class="step-desc">Identified 5 specific gaps in your current marketing infrastructure.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="step-number">3</span>
+                    <h3 class="step-title">Strategy &amp; Copy</h3>
+                    <p class="step-desc">Created campaign angles, ad scripts, and a VSL outline in your voice.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="step-number">4</span>
+                    <h3 class="step-title">Live Build</h3>
+                    <p class="step-desc">Built a webinar registration page and confirmation page in your brand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables Section -->
+    <section class="deliverables-section">
+        <div class="container">
+            <h2 class="section-heading reveal">What Was Built</h2>
+
+            <!-- Phase 1 -->
+            <span class="phase-label reveal">Phase 1: Research &amp; Strategy</span>
+
+            <!-- Card 1: Market Research -->
+            <div class="deliverable-card reveal">
+                <div class="deliverable-header" onclick="toggleCard(this)">
+                    <div class="deliverable-header-left">
+                        <h3 class="deliverable-title">Market Research &amp; Gap Analysis</h3>
+                        <p class="deliverable-desc">Complete analysis of Organic Overdrive: your audience profile, competitive positioning, current funnel mapping, and 5 specific gaps identified with recommendations.</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                </div>
+                <div class="deliverable-body">
+                    <div class="deliverable-content">
+                        <span class="preview-label">5 Gaps Identified</span>
+                        <ul>
+                            <li>No webinar funnel infrastructure to convert beyond DM sales</li>
+                            <li>No structured landing page (current site is primarily a testimonial wall)</li>
+                            <li>No email capture or nurture sequences for long-term follow-up</li>
+                            <li>No paid acquisition system for the coaching business</li>
+                            <li>Scattered offer presentation across multiple Whop products</li>
+                        </ul>
+                        <a href="[RESEARCH_DOC_LINK]" target="_blank" class="doc-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#37ca37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            View Full Research
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Campaign Angles -->
+            <div class="deliverable-card reveal">
+                <div class="deliverable-header" onclick="toggleCard(this)">
+                    <div class="deliverable-header-left">
+                        <h3 class="deliverable-title">Campaign Angles (5 Angles)</h3>
+                        <p class="deliverable-desc">5 campaign angles with headlines and hooks, built around your strongest differentiator: zero ad spend organic dropshipping.</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                </div>
+                <div class="deliverable-body">
+                    <div class="deliverable-content">
+                        <span class="preview-label">Angle Preview</span>
+                        <ul>
+                            <li><strong style="color: #ffffff !important;">"No Ads, No Problem"</strong> | The Zero Ad Spend angle</li>
+                            <li><strong style="color: #ffffff !important;">"Dropout Proof"</strong> | The Origin Story angle</li>
+                            <li><strong style="color: #ffffff !important;">"Proof Avalanche"</strong> | The 260+ Students angle</li>
+                            <li><strong style="color: #ffffff !important;">"The Method"</strong> | The Organic Overdrive Mechanism angle</li>
+                            <li><strong style="color: #ffffff !important;">"Phone Money"</strong> | The Accessibility angle</li>
+                        </ul>
+                        <a href="[COPY_STRATEGY_DOC_LINK]" target="_blank" class="doc-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#37ca37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            View All Angles
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <span class="phase-label reveal" style="margin-top: 48px !important;">Phase 2: Copy &amp; Scripts</span>
+
+            <!-- Card 3: Ad Scripts -->
+            <div class="deliverable-card reveal">
+                <div class="deliverable-header" onclick="toggleCard(this)">
+                    <div class="deliverable-header-left">
+                        <h3 class="deliverable-title">Ad Script Concepts (3 Scripts)</h3>
+                        <p class="deliverable-desc">3 ad scripts in your voice. Direct response, proof-led, and educational. Ready to film on a phone.</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                </div>
+                <div class="deliverable-body">
+                    <div class="deliverable-content">
+                        <span class="preview-label">Hook Preview</span>
+                        <ul>
+                            <li>"If you are trying to start dropshipping but you have zero money for ads, stop scrolling."</li>
+                            <li>"$500,000 a month. No paid ads. Age 18."</li>
+                            <li>"Here is why most dropshippers fail and it has nothing to do with their product."</li>
+                        </ul>
+                        <a href="[COPY_STRATEGY_DOC_LINK]" target="_blank" class="doc-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#37ca37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            View Full Scripts
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: VSL Outline -->
+            <div class="deliverable-card reveal">
+                <div class="deliverable-header" onclick="toggleCard(this)">
+                    <div class="deliverable-header-left">
+                        <h3 class="deliverable-title">VSL Outline</h3>
+                        <p class="deliverable-desc">High-level video sales letter outline covering hook, problem, solution, credibility, offer, and CTA. Ready to expand into a full 3,000+ word script.</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                </div>
+                <div class="deliverable-body">
+                    <div class="deliverable-content">
+                        <span class="preview-label">Structure</span>
+                        <ul>
+                            <li>Hook: Pattern interrupt on organic revenue</li>
+                            <li>Problem: Why paid ads are bleeding beginners dry</li>
+                            <li>Solution: The Organic Overdrive method</li>
+                            <li>Credibility: $500K/month, 260+ students</li>
+                            <li>Offer: Coaching program stack</li>
+                            <li>CTA: Book a call or enroll</li>
+                        </ul>
+                        <a href="[COPY_STRATEGY_DOC_LINK]" target="_blank" class="doc-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#37ca37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            View Full Outline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <span class="phase-label reveal" style="margin-top: 48px !important;">Phase 3: Live Pages</span>
+
+            <!-- Card 5: Registration Page -->
+            <div class="deliverable-card reveal">
+                <div class="deliverable-header" onclick="toggleCard(this)">
+                    <div class="deliverable-header-left">
+                        <h3 class="deliverable-title">Webinar Registration Page <span class="live-badge">LIVE</span></h3>
+                        <p class="deliverable-desc">A fully built, live webinar registration page in your brand. Dark theme, green accents, your images, your proof points. Built to convert cold and warm traffic.</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                </div>
+                <div class="deliverable-body">
+                    <div class="deliverable-content">
+                        <div class="iframe-wrapper">
+                            <iframe src="[REGISTRATION_PAGE_URL]" loading="lazy" title="Registration Page Preview"></iframe>
+                        </div>
+                        <a href="[REGISTRATION_PAGE_URL]" target="_blank" class="view-page-btn">
+                            View Live Page
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#050505" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Confirmation Page -->
+            <div class="deliverable-card reveal">
+                <div class="deliverable-header" onclick="toggleCard(this)">
+                    <div class="deliverable-header-left">
+                        <h3 class="deliverable-title">Webinar Confirmation Page <span class="live-badge">LIVE</span></h3>
+                        <p class="deliverable-desc">The post-registration page. Confirms their spot, sets expectations, and builds anticipation for the training. Includes share buttons for organic reach.</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                </div>
+                <div class="deliverable-body">
+                    <div class="deliverable-content">
+                        <div class="iframe-wrapper">
+                            <iframe src="[CONFIRMATION_PAGE_URL]" loading="lazy" title="Confirmation Page Preview"></iframe>
+                        </div>
+                        <a href="[CONFIRMATION_PAGE_URL]" target="_blank" class="view-page-btn">
+                            View Live Page
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#050505" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="case-study-section">
+        <div class="container">
+            <h2 class="section-heading reveal">What Happens When This System Goes Live</h2>
+            <div class="case-card reveal">
+                <div class="case-top">
+                    <div class="case-avatar">FR</div>
+                    <div>
+                        <h3 class="case-name">Frank Romano</h3>
+                        <a href="https://instagram.com/frankromano__" target="_blank" class="case-handle">@frankromano__</a>
+                    </div>
+                </div>
+                <p class="case-quote">We built Frank a complete webinar funnel system. Registration page, confirmation page, email sequences, the full infrastructure. First month: &pound;50,000 in revenue. Now scaling toward &pound;100K/month.</p>
+                <div class="case-stats">
+                    <div class="case-stat-item">
+                        <span class="case-stat-value">&pound;50K</span>
+                        <span class="case-stat-label">First Month</span>
+                    </div>
+                    <div class="case-stat-item">
+                        <span class="case-stat-value">Webinar Funnel</span>
+                        <span class="case-stat-label">Type</span>
+                    </div>
+                    <div class="case-stat-item">
+                        <span class="case-stat-value">DFY</span>
+                        <span class="case-stat-label">Service Model</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2>Ready to Implement This?</h2>
+            <p>Everything above was built specifically for Organic Overdrive. Imagine what we could build working together.</p>
+            <a href="https://calendar.app.google/bHtRPdE8fkkvgxcD8" target="_blank" class="cta-btn">Book a Call with Tom</a>
+            <p class="cta-note">15 minutes. No pitch. Just a conversation about how to scale your marketing.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <a href="https://calendar.app.google/bHtRPdE8fkkvgxcD8" target="_blank">Bradley Copy Ltd</a>
+        <p class="copy">&copy; 2026 Bradley Copy Ltd. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // ===== SCROLL REVEAL =====
+        (function() {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+
+        // ===== COUNT-UP ANIMATION =====
+        (function() {
+            var counted = false;
+            var statObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting && !counted) {
+                        counted = true;
+                        document.querySelectorAll('.stat-number').forEach(function(el) {
+                            var target = parseInt(el.getAttribute('data-target'));
+                            var suffix = el.getAttribute('data-suffix') || '';
+                            var current = 0;
+                            var increment = Math.max(1, Math.floor(target / 30));
+                            var timer = setInterval(function() {
+                                current += increment;
+                                if (current >= target) {
+                                    current = target;
+                                    clearInterval(timer);
+                                }
+                                el.textContent = current + suffix;
+                            }, 40);
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            var statsBar = document.querySelector('.stats-bar');
+            if (statsBar) {
+                statObserver.observe(statsBar);
+            }
+        })();
+
+        // ===== ACCORDION TOGGLE =====
+        function toggleCard(header) {
+            var body = header.nextElementSibling;
+            var icon = header.querySelector('.toggle-icon');
+
+            if (body.classList.contains('open')) {
+                body.classList.remove('open');
+                icon.classList.remove('open');
+            } else {
+                body.classList.add('open');
+                icon.classList.add('open');
+            }
+        }
+    </script>
+
+</body>
+</html>
